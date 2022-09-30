@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinnamonCinemasService", "CinnamonCinemasService\CinnamonCinemasService.csproj", "{981C67F5-EC00-4F52-8C7E-774373FB855C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinnamonCinemasService.Tests", "CinnamonCinemasService.Tests\CinnamonCinemasService.Tests.csproj", "{4A74821A-F06A-4EC6-8891-B4E83BBFBB69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{981C67F5-EC00-4F52-8C7E-774373FB855C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981C67F5-EC00-4F52-8C7E-774373FB855C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981C67F5-EC00-4F52-8C7E-774373FB855C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981C67F5-EC00-4F52-8C7E-774373FB855C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A74821A-F06A-4EC6-8891-B4E83BBFBB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A74821A-F06A-4EC6-8891-B4E83BBFBB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A74821A-F06A-4EC6-8891-B4E83BBFBB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A74821A-F06A-4EC6-8891-B4E83BBFBB69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
