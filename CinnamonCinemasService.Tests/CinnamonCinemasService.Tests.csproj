@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CinnamonCinemasService\CinnamonCinemasService.csproj" />
-    <ProjectReference Include="CinnamonCinemasService.Tests.csproj" />
   </ItemGroup>
 
 </Project>
