@@ -1,5 +1,6 @@
 using CinnamonCinemasService.Logic;
 using CinnamonCinemasService.Models;
+using FluentAssertions;
 
 namespace CinnamonCinemasService.Tests;
 
@@ -11,27 +12,22 @@ public class SeatBookingServiceTests
     {
         _seatBookingService = new SeatBookingService(); 
     }
-
-    //[Test]
-    //public void Test_If_Theater_Seating_Is_Set_As_Expected()
-    //{
-    //    //Arrange
-    //    List<Seat> seatList = new List<Seat>();
-    //    List<string> expectedSeatList = new List<string>(); 
-
-    //    //char[] seatRows = { 'A', 'B', 'C' };
-    //    //int[] seatNums = { 1, 2, 3, 4, 5 };
-
-    //    //Act
-    //    seatList = _seatBookingService.SetTheatreSeating();
-
-    //    //Assert
-    //    Assert.Pass();
-    //}
-
+    
     [Test]
     public void Test_Theatre_Seating_Got_Correct_Total_No_Of_Seats_As_Per_The_Input()
     {
-        
+        //Arrange
+        List<Seat> seatList = new List<Seat>();
+
+        char[] seatRows = { 'A', 'B', 'C' };
+        int[] seatNums = { 1, 2, 3, 4, 5 };
+
+        //Act
+        seatList = _seatBookingService.SetTheatreSeating(seatRows, seatNums);
+
+        //Assert
+        seatList.Count().Should().Be(15);
     }
+
+    
 }
