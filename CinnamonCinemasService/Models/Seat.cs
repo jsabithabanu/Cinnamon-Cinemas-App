@@ -9,10 +9,6 @@ namespace CinnamonCinemasService.Models
 {
     public class Seat
     {
-        //    public char SeatRow { get; set; }
-        //    public int SeatNum { get; set; }
-        //   // public List<Seat>? SeatList { get; set; }
-
         public string? SeatNumber { get; set; }
         public SeatSatus EnumSeatStatus { get; set; }
     }

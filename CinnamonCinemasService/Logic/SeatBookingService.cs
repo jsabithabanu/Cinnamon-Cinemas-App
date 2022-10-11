@@ -53,10 +53,9 @@ namespace CinnamonCinemasService.Logic
         public void BookSeats()
         {
             int totalBookedSeats = 0;
-
+            int updatedNoOfSeats = 0;
             seatList = SetTheatreSeating();
-            int updatedSeats = 0;
-
+            
             while (totalBookedSeats < seatList.Count())
             {
                 var noOfSeatsRequested = customer.SeatRequest();
@@ -64,7 +63,7 @@ namespace CinnamonCinemasService.Logic
 
                 if (noOfSeatsRequested <= totalAvailableSeats)
                 {
-                    for (int i = 0; i < noOfSeatsRequested; i++)
+                    while (noOfSeatsRequested != updatedNoOfSeats)
                     {
                         foreach (var seat in seatList)
                         {
@@ -72,22 +71,22 @@ namespace CinnamonCinemasService.Logic
                             {
                                 seat.EnumSeatStatus = SeatSatus.Taken;
                                 totalBookedSeats++;
-                                updatedSeats++;
+                                updatedNoOfSeats++;
                             }
-                            if (updatedSeats == noOfSeatsRequested)
+                            if (updatedNoOfSeats == noOfSeatsRequested)
                             {
+                                updatedNoOfSeats = 0;
                                 break;
                             }
                         }
-                        if (updatedSeats == noOfSeatsRequested)
-                        {
-                            updatedSeats = 0;
-                            break;
-                        }
+                        break;
                     }
                 }
                 else
+                {
+                    printSeat.PrintCannotBookRequestedSeats(noOfSeatsRequested, totalAvailableSeats);
                     break;
+                }
             }
             printSeat.PrintBookedAndAvailableSeats(seatList);
         }

@@ -27,7 +27,6 @@ public class SeatBookingServiceTests
 
         //Assert
         seatList.Count().Should().Be(15);
-    }
+    }   
 
-    
 }
